@@ -1,13 +1,9 @@
-const technologies = ['html', 'css', 'javascript', 'react'];
+const cars = [
+    {brand: "Vapid", price: 123.2, stock: 123},
+    {brand: "Mustang", price: 248, stock: 67},
+    {brand: "Zentorno", price: 789.4, stock: 4},
+]
 
-
-console.log(technologies[0])
-
-console.log(technologies.length)
-
-technologies.push("node")
-
-
-for(const tech of technologies){
-    console.log(tech)
+for(const car of cars){
+    console.log(car.brand, ",", car.price)
 }
