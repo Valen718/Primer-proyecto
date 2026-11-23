@@ -1,10 +1,13 @@
-const name = "valen"
+function createGreeting(name){
+    return `Hola, ${name}`;
+}
 
-let steps = 3
+function addNumbers(a, b){
+    return c = a+b;
+}
 
-console.log(name)
-console.log(steps)
+const greeting = createGreeting("Valentin");
+const total = addNumbers(5, 6);
 
-steps = 4
-
-console.log(steps)
+console.log(greeting);
+console.log(total);
