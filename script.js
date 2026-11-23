@@ -1,13 +1,25 @@
-function createGreeting(name){
-    return `Hola, ${name}`;
+function checkAge(age){
+    if(age >= 18){
+        return "Pass";
+    }else{
+        return "Can't pass";
+    }
 }
 
-function addNumbers(a, b){
-    return c = a+b;
+
+const verify = checkAge(18);
+
+console.log(verify);
+
+
+function checkpassword(password){
+    if(password === 1234){
+        return "pass"
+    }else{
+        return "can't pass"
+    }
 }
 
-const greeting = createGreeting("Valentin");
-const total = addNumbers(5, 6);
 
-console.log(greeting);
-console.log(total);
+const login = checkpassword(1234)
+console.log(login)
