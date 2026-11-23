@@ -4,9 +4,18 @@ const cars = [
     {brand: "Zentorno", price: 789.4, stock: 4},
 ];
 
-const carsInStock = cars.filter(car => car.stock > 10);
+const h1 = document.querySelector("h1");
 
-console.log("Autos con stock mayor a 10:\n")
-for(const car of carsInStock){
-    console.log(car.brand, ",", car.price)
+h1.textContent = "Tienda de autos";
+
+
+const carList = document.querySelector("#car-list");
+
+const item = document.createElement("li")
+
+for(const car of cars){
+    if(car.brand === "Vapid"){
+        item.textContent = car.brand;
+        carList.append(item)
+    }
 }
