@@ -11,11 +11,8 @@ h1.textContent = "Tienda de autos";
 
 const carList = document.querySelector("#car-list");
 
-const item = document.createElement("li")
-
 for(const car of cars){
-    if(car.brand === "Vapid"){
-        item.textContent = car.brand;
-        carList.append(item)
-    }
+    const item = document.createElement("li");
+    item.textContent = `Car: ${car.brand}, Price: ${car.price}`
+    carList.append(item)
 }
