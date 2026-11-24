@@ -4,15 +4,23 @@ const cars = [
     {brand: "Zentorno", price: 789.4, stock: 4},
 ];
 
-const h1 = document.querySelector("h1");
 
-h1.textContent = "Tienda de autos";
+const button = document.querySelector("#welcome-button")
 
+button.addEventListener("click", ()=>{
+    const h1 = document.querySelector("h1")
+    h1.textContent = "Bienvenido a la tienda"
+    
+})
 
 const carList = document.querySelector("#car-list");
 
-for(const car of cars){
-    const item = document.createElement("li");
-    item.textContent = `Car: ${car.brand}, Price: ${car.price}`
-    carList.append(item)
+function showCar(carsToShow){
+    for(const car of carsToShow){
+        const itemLi = document.createElement("li");
+        itemLi.textContent = `Car: ${car.brand}, Price: ${car.price}`
+        carList.append(itemLi)
+    }
 }
+
+showCar(cars);
