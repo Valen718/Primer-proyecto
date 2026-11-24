@@ -6,9 +6,9 @@ const cars = [
 
 
 const button = document.querySelector("#welcome-button")
+const h1 = document.querySelector("h1")
 
 button.addEventListener("click", ()=>{
-    const h1 = document.querySelector("h1")
     h1.textContent = "Bienvenido a la tienda"
     
 })
@@ -24,3 +24,13 @@ function showCar(carsToShow){
 }
 
 showCar(cars);
+
+
+const filter = document.querySelector("#filter-button")
+
+filter.addEventListener("click", ()=>{
+    carList.textContent = ""
+    h1.textContent = "Autos filtrados con stock mayor a 10"
+    const filt = cars.filter(car => car.stock > 10)
+    showCar(filt)
+})
